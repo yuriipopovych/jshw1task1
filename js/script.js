@@ -1,17 +1,29 @@
 
 //////////1.1/////////
+
+
 function converter(usd, grn) {
-  if (usd >0 || hrn >0)
-    console.log(usd * 26)
-    console.log(grn / 26)
+  var dollar = usd * 26;
+  var grivna = grn / 26;
+  if (usd > 0 || grn > 0) {
+    return {dollar:dollar, grivna:grivna};
+  }
 }
-converter(10, 100);
+console.log(converter(10,10));
 
 
 //////////1.2//////////
+// var array = [1,23,-5,11];
+// console.log(Math.min(...array));
+// console.log(Math.max(...array));
+
 var array = [1,23,-5,11];
-console.log(Math.min(...array));
-console.log(Math.max(...array));
+function minMax (array) {
+   var min = (Math.min(...array));
+   var max = (Math.max(...array));
+  return {min:min, max:max};
+}
+console.log(minMax(array));
 
 
 ////////////1.3////////////

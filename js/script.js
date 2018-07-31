@@ -27,10 +27,10 @@ console.log(minMax(array));
 
 
 ////////////1.3////////////
-var sum =0;
-const arr = [1,4,2];
-	for (i = 0; i < arr.length; i++){
-		sum += arr[i]; 
-	}
-const result = sum / arr.length;
-console.log(result);
+function averageNumber(ourArray) {
+  var arrSum = ourArray.reduce(function(firstNumber, nextNumber) {
+    return firstNumber + nextNumber;
+  });
+  return arrSum / ourArray.length;
+}
+console.log(averageNumber([1,4,2]));

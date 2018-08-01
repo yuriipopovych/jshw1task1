@@ -3,14 +3,17 @@
 
 
 function converter(usd, grn) {
-  var dollar = usd * 26;
-  var grivna = grn / 26;
-  if (usd > 0 || grn > 0) {
-    return {dollar:dollar, grivna:grivna};
-  }
-}
-console.log(converter(10,10));
-
+   if (usd >0 && grn > 0) {
+     return {usd: usd *26, grn: grn / 26}
+   } else if ( usd > 0) {
+     return {usd: usd * 26}
+   }else if ( grn > 0) {
+     return {usd: grn / 26}
+   } else  {
+     return {}
+   }
+ }
+console.log(converter(10, 10));
 
 //////////1.2//////////
 // var array = [1,23,-5,11];
